@@ -20,10 +20,21 @@
 
         /* 左侧边栏样式 (头像与链接) */
         .sidebar {
-            flex: 1;
-            max-width: 250px;
-            text-align: center;
+          flex: 1;
+          max-width: 250px;
+          text-align: center; /* 保持上面的头像、名字等居中 */
         }
+
+        .social-links {
+          display: block;        /* 改为 block，让容器占满侧边栏的宽度 */
+          text-align: left;      /* 强制内容靠左对齐 */
+          line-height: 1.8;      /* 保持行间距 */
+          /* margin: 0 auto;     <-- 删掉这一行，取消整体居中 */
+          
+          /* 可选：如果你觉得贴最左侧边缘太紧了，可以加一点左边距 */
+          padding-left: 45px; 
+        }
+        
         .sidebar img {
             width: 160px;
             height: 160px;
@@ -41,18 +52,23 @@
             color: #666;
             margin-bottom: 20px;
         }
-        .social-links a {
-            display: block;
-            color: #494e52;
-            text-decoration: none;
+        /* 让全局所有的超链接都不改变原本文字的颜色，并加上下划线 */
+        a {
+            color: inherit; 
+            text-decoration: underline;
+        }
+        a:hover {
+            color: #0366d6; /* 鼠标悬停时变蓝，保留一点互动感，不需要可删除 */
+        }
+        
+
+        /* 新的社交链接排版样式 */
+        .social-item {
             margin-bottom: 12px;
             font-size: 0.95em;
             text-align: left;
             padding-left: 20px;
-        }
-        .social-links a:hover {
-            color: #0366d6;
-            text-decoration: underline;
+            color: #494e52;
         }
 
         /* 右侧主要内容样式 */
@@ -107,7 +123,7 @@
             .social-links {
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: center;
+                justify-content: left;
                 gap: 15px;
             }
             .social-links a {
@@ -122,13 +138,13 @@
     <div class="sidebar">
         <img src="./image/IMG_9186.jpeg" alt="Haiyang HE">
         <h2>Haiyang HE</h2>
-        <p>Ph.D. Student<br>CDT-D2AIR<br>University of Edinburgh</p>
+        <p>PhD Student<br><a href="https://www.cdt-d2air.uk/" target="_blank">CDT-D2AIR</a><br>University of Edinburgh</p>
         
         <div class="social-links">
-            <a href="mailto:H.he-31@sms.ed.ac.uk">✉️ Email</a>
-            <!-- <a href="#">📄 My CV</a> -->
-            <a href="#">🔗 LinkedIn</a>
-            <!-- <a href="#">🐙 Github</a>
+            ✉️ <a href="mailto:H.he-31@sms.ed.ac.uk">Email</a><br>
+            <!-- <a href="#">My CV</a> -->
+            🔗 <a href="https://www.linkedin.com/in/haiyang-he-53a012326/">LinkedIn</a>
+            <!-- <a href="#">Github</a>
             <a href="#">🎓 Google Scholar</a> -->
         </div>
     </div>
@@ -136,7 +152,7 @@
     <div class="content">
         <h1>About Me</h1>
         
-        <p>Hi, my name is <strong>Haiyang HE</strong>. You can call me Ocean ("Haiyang" 海洋 means ocean in Chinese). This personal page is currently under construction! &gt;_&lt;#</p>
+        <p>Hi, my name is <strong>Haiyang HE</strong>. You can call me <strong>Ocean</strong> ("Haiyang" 海洋 means ocean in Chinese). This personal page is currently under construction! &gt;_&lt;#</p>
         
         <p>I am pursuing my PhD at the <strong>University of Edinburgh</strong> in the CDT-D2AIR program. My research interest focuses on dependable and deployable AI for robotics.</p>
         
