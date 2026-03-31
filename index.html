@@ -1,5 +1,164 @@
 <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haiyang HE - Personal Page</title>
+    <style>
+        /* 全局基础字体与排版 */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: flex;
+            gap: 50px;
+        }
+
+        /* 左侧边栏样式 (头像与链接) */
+        .sidebar {
+            flex: 1;
+            max-width: 250px;
+            text-align: center;
+        }
+        .sidebar img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 8px rgba(0,0px,0,0.1);
+        }
+        .sidebar h2 {
+            margin: 0 0 5px 0;
+            font-size: 1.5em;
+        }
+        .sidebar p {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .social-links a {
+            display: block;
+            color: #494e52;
+            text-decoration: none;
+            margin-bottom: 12px;
+            font-size: 0.95em;
+            text-align: left;
+            padding-left: 20px;
+        }
+        .social-links a:hover {
+            color: #0366d6;
+            text-decoration: underline;
+        }
+
+        /* 右侧主要内容样式 */
+        .content {
+            flex: 3;
+        }
+        .content h1 {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 0;
+            font-size: 2em;
+        }
+        .content h3 {
+            margin-top: 35px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+            font-size: 1.3em;
+        }
+        
+        /* 动态/新闻列表样式 */
+        ul.news {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul.news li {
+            margin-bottom: 12px;
+            padding-left: 15px;
+            position: relative;
+        }
+        ul.news li::before {
+            content: "•";
+            color: #0366d6;
+            font-weight: bold;
+            display: inline-block; 
+            width: 1em;
+            margin-left: -1em;
+        }
+        .date {
+            font-weight: 600;
+            margin-right: 10px;
+        }
+
+        /* 手机端自适应排版 (变成上下结构) */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+                padding: 20px;
+            }
+            .sidebar {
+                max-width: 100%;
+            }
+            .social-links {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            .social-links a {
+                padding-left: 0;
+                margin-bottom: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <img src="./image/IMG_9186.jpeg" alt="Haiyang HE">
+        <h2>Haiyang HE</h2>
+        <p>Ph.D. Student<br>CDT-D2AIR<br>University of Edinburgh</p>
+        
+        <div class="social-links">
+            <a href="mailto:H.he-31@sms.ed.ac.uk">✉️ Email</a>
+            <!-- <a href="#">📄 My CV</a> -->
+            <a href="#">🔗 LinkedIn</a>
+            <!-- <a href="#">🐙 Github</a>
+            <a href="#">🎓 Google Scholar</a> -->
+        </div>
+    </div>
+
+    <div class="content">
+        <h1>About Me</h1>
+        
+        <p>Hi, my name is <strong>Haiyang HE</strong>. You can call me Ocean ("Haiyang" 海洋 means ocean in Chinese). This personal page is currently under construction! &gt;_&lt;#</p>
+        
+        <p>I am pursuing my PhD at the <strong>University of Edinburgh</strong> in the CDT-D2AIR program. My research interest focuses on dependable and deployable AI for robotics.</p>
+        
+        <p>I received my BEng from ECUST, China, and my MSc from the University of Manchester. Prior to my PhD, I worked as a robotics engineer at ABB Shanghai and as a PM at SenseTime Shanghai.</p>
+
+        <h3>Research Interests</h3>
+        <ul>
+            <li>Dependable and Deployable AI</li>
+            <li>Robotics and Automation</li>
+            <li>Knowledge Representation</li>
+        </ul>
+
+        <h3>News and Updates</h3>
+        <ul class="news">
+            <li><span class="date">Mar 2026:</span> I will finish this personal page, I promise!</li>
+            <li><span class="date">Sep 2025:</span> Started my PhD journey at the University of Edinburgh!</li>
+        </ul>
+    </div>
+
+</body>
+</html>
+<!-- <html>
   <head>
     <meta charset="utf-8">
     <title>Ocean's Page</title>
@@ -14,4 +173,4 @@
     <p>My Email: H.He-31@sms.ed.ac.uk </p>
     
   </body>
-</html>
+</html> -->
